@@ -29,10 +29,15 @@ src/
 - Driver PostgreSQL JDBC (déjà inclus dans `lib/postgresql-42.7.7.jar`)
 
 ## Pour importer la base
-``` psql -U postgres -d association_db -f membre.sql ```
+```bash 
+psql -U postgres -d association_db -f membre.sql 
+```
 
-## Si tu n'a pas encore creer la base
-```- createdb -U postgres association_db & psql -U postgres -d association_db -f membre.sql ```
+**Si tu n'a pas encore creer la base**
+```bash
+- createdb -U postgres association_db 
+- psql -U postgres -d association_db -f membre.sql 
+```
 
 
 ## Configuration de la Base de Données
