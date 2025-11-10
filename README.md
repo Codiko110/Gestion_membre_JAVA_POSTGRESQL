@@ -2,6 +2,26 @@
 
 Application Java Swing pour la gestion des membres, projets, cotisations et participations d'une association.
 
+## Fonctionnalités
+
+- 🔑 Connexion administrateur
+- 👥 Gestion des membres (ajout, modification, suppression, liste)
+- 📦 Gestion des projets (création, modification, suppression, liste)
+- 💰 Gestion des cotisations
+- 🤝 Gestion des participations (association membres-projets)
+- 📊 Tableau de bord avec statistiques
+
+## Structure du Projet
+
+```
+src/
+├── model/          → Classes POJO (entités)
+├── dao/            → Accès à la base de données
+├── view/           → Interfaces graphiques Swing
+├── controller/     → Logique métier
+└── App.java        → Point d'entrée principal
+```
+
 ## Prérequis
 
 - Java JDK 8 ou supérieur
@@ -9,11 +29,10 @@ Application Java Swing pour la gestion des membres, projets, cotisations et part
 - Driver PostgreSQL JDBC (déjà inclus dans `lib/postgresql-42.7.7.jar`)
 
 ## Pour importer la base
-psql -U postgres -d association_db -f membre.sql
+``` psql -U postgres -d association_db -f membre.sql ```
 
 ## Si tu n'a pas encore creer la base
-createdb -U postgres association_db
-psql -U postgres -d association_db -f membre.sql
+```- createdb -U postgres association_db & psql -U postgres -d association_db -f membre.sql ```
 
 
 ## Configuration de la Base de Données
@@ -104,29 +123,7 @@ java -cp "out:lib/postgresql-42.7.7.jar" App
 java -cp "out;lib/postgresql-42.7.7.jar" App
 ```
 
-## Structure du Projet
 
-```
-src/
-├── model/          → Classes POJO (entités)
-├── dao/            → Accès à la base de données
-├── view/           → Interfaces graphiques Swing
-├── controller/     → Logique métier
-└── App.java        → Point d'entrée principal
-```
 
-## Fonctionnalités
-
-- 🔑 Connexion administrateur
-- 👥 Gestion des membres (ajout, modification, suppression, liste)
-- 📦 Gestion des projets (création, modification, suppression, liste)
-- 💰 Gestion des cotisations
-- 🤝 Gestion des participations (association membres-projets)
-- 📊 Tableau de bord avec statistiques
-
-## Identifiants par défaut
-
-- Username: `admin`
-- Password: `admin123`
 
 
