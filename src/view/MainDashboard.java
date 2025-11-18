@@ -111,7 +111,7 @@ public class MainDashboard extends JFrame {
         JPanel panelCotisations = new JPanel(new BorderLayout());
         panelCotisations.setBorder(BorderFactory.createTitledBorder("Total Cotisations"));
         BigDecimal totalCotisations = cotisationController.totalCotisations();
-        JLabel lblCotisations = new JLabel(totalCotisations.toString() + " €", SwingConstants.CENTER);
+        JLabel lblCotisations = new JLabel(totalCotisations.toString() + " Ar", SwingConstants.CENTER);
         lblCotisations.setFont(new Font("Arial", Font.BOLD, 24));
         panelCotisations.add(lblCotisations, BorderLayout.CENTER);
         statsPanel.add(panelCotisations);
@@ -124,7 +124,7 @@ public class MainDashboard extends JFrame {
             lblMembres.setText(String.valueOf(membreController.nombreMembres()));
             lblProjets.setText(String.valueOf(projetController.nombreProjets()));
             lblProjetsActifs.setText(String.valueOf(projetController.listerProjetsActifs().size()));
-            lblCotisations.setText(cotisationController.totalCotisations().toString() + " €");
+            lblCotisations.setText(cotisationController.totalCotisations().toString() + " Ar");
         });
         
         JPanel buttonPanel = new JPanel();
